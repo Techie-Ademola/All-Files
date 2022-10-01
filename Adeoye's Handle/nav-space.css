@@ -1,0 +1,281 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.navbar {
+    background-color: whitesmoke;
+  }
+
+.navbar-toggler {border: none !important;}
+.navbar-toggler:hover {
+  border: 1px solid gray !important;
+  border-radius: 70px !important;
+}
+.navbar-toggler:focus {
+  border: 1px solid gray !important;
+  border-radius: 70px !important;
+}
+  
+.sidenav {
+    height: 100%;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 4% !important;
+    transition: .5s;
+  }
+  
+.sidenav a {
+    padding: 6px 70px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #001a2f !important;
+    background-color: transparent;
+    border: none;
+    transition: .5s;
+  }
+  
+.sidenav a:hover {
+    background-color: #001a2f !important;
+    color: white;
+  }
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+.newset {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    overflow-x: hidden !important;
+    transition: .3s;
+  }
+
+.sidebar a {
+    border-radius: 10px;
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: .3s;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+.sidebar a.active:hover {
+    background-color: #001a2f;
+    color: white !important;
+}
+    
+.sidebar a:focus {
+    background-color: #001a2f !important;
+    color: white !important;
+  }
+
+.sidebar a:hover:not(.active) {
+    background-color: #001a2f;
+    color: white !important;
+  }
+    
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+.card-o {
+    padding: 17px !important;
+    text-align: left !important;
+    background-color: #001a2f !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+.newset {
+    margin-left: 200px;
+  }
+
+.old {
+    font-size: 22px;
+    color: white;
+  }
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.robb {
+    width: 50% !important;
+  }
+
+.rev {
+    padding: 0 !important;
+  }
+
+/* Media Queries */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center !important;
+      padding-left: 0px !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dash {margin-top: 40px;}
+    .bars {display: none !important;}
+    .bars-2 {display: none !important;}
+    #mySidenav {display: none;}
+    .collapseNav {z-index: 10 !important;}
+    .brandText {padding: 20px 0px !important;}
+    .mainDiv {
+      margin-top: 0% !important; 
+      margin-left: 0% !important; 
+      padding-top: 30px;
+    }
+    body {
+      margin: 0;
+    }
+    .sidebar {
+      padding-top: 150px !important;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .sidebar a {
+      display: block;
+      text-align: left;
+      padding-left: 30px;
+      float: none;
+    }
+    .column {
+      width: 100% !important;
+      display: block;
+      margin-bottom: 20px;
+      margin-left: 0px !important;
+
+    }
+    .card {
+      width: 100% !important;
+    }
+    .newset {
+      margin-left: 0 !important;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* padding: 1px; */
+    text-align: center;
+    background-color: white;
+  }
+
+.table {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+thead {
+    margin-top: -25px !important;
+  }
+
+tr th {
+    border-top: none !important;
+    border-bottom: 1px solid black !important;
+  }
+
+tr td {
+    border-right: none !important;
+    border-bottom: 1px solid lightgrey;
+  }
+
+.signin {
+    border-radius: 50%;
+    text-align: center !important;
+    width: 25px;
+    height: 25px;
+    background-color: blue;
+    color: white;
+  }
+
+.fa-ellipsis-h {
+    color: white !important;
+    text-align: center !important;
+    margin-left: -6px !important;
+    margin-top: 0px !important;
+  }
+
+.sette {
+    transform: rotate(90deg);
+  }
+
+.bars {
+    font-size:30px;
+    cursor:pointer;
+    color: black;
+    border-radius: 50%;
+    padding: 0px 8px;
+  }
+  
+  .bars:hover {
+    background-color: cornflowerblue !important;
+  }
+
+.brandText {
+    color: blue !important;
+    font-weight: bold;
+    letter-spacing: 10px;
+  }
+
+.mainDiv {
+    background-color: #001a2f !important;
+    margin-top: 5%;
+  }
+
+.quizLogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+.quizLogo-2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+.webDiv {
+    border-right: 2px solid black;
+    border-color: whitesmoke;
+    background-color: #001a2f;
+    padding: 50px 0px 30px 0px;
+    margin-bottom: 50px;
+}
+
+.dash {
+    margin-top: 20px;
+}
+
+.collapseNav {z-index: -10;}

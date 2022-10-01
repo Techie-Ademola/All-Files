@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz Dashboard</title>
+    <link rel="stylesheet" href="nav-space.css">
+    <script src="https://kit.fontawesome.com/0c390bb7a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-0">
+      <span class="bars" id="bar1" onclick="closeNav()">&#9776;</span>
+      <span style="display: none;" class="bars bars-2" id="bar2" onclick="openNav()">&#9776;</span>
+      <a class="navbar-brand brandText pl-2" href="#"> QUIZ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <span class="navbar-text ml-auto">
+          <div class="btn-group">
+            <img class="img-fluid img-responsive quizLogo" src="./IMAGES/Quiz logo.jpg" alt="">
+              <button type="button" class="btn dropdown-toggle font-weight-bold" data-toggle="dropdown" aria-expanded="false">
+                  <span class="font-weight-normal"> Hello,
+                  </span>ADMIN
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item" type="button">Dev. Kelvin Powell</button>
+                <button class="dropdown-item" type="button">Dev. Jaspal</button>
+                <button class="dropdown-item" type="button">Dev. Mosh Hamedani</button>
+              </div>
+            </div>
+        </span>
+      </div>
+    </nav>
+    
+    <div class="sidebar sidenav collapse collapseNav" id="navbarText">
+      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          <i class="fa fa-home" aria-hidden="true"></i> Dashboard
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <i class="fa fa-users" aria-hidden="true"></i> Client
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <i class="fa fa-align-right sette" aria-hidden="true"></i> Stock
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i> Purchase
+        </a>
+        <a href="#" class="list-group-item list-group-item-action mb-5">
+          <i class="fa fa-database" aria-hidden="true"></i> Sign Out
+        </a>
+    </div>
+
+    <div class="sidebar sidenav" id="mySidenav">
+      <div class="webDiv">
+        <div style="width: fit-content" class="mx-auto pt-4"><img class="img-fluid img-responsive quizLogo-2" src="./IMAGES/Quiz logo.jpg" alt=""></div>
+        <h5 class="text-center text-white py-2">Web Developer</h5>
+      </div>
+      <a href="#" class="list-group-item list-group-item-action active pl-3" aria-current="true">
+          <i class="fa fa-home" aria-hidden="true"></i> Dashboard
+        </a>
+        <a href="#" class="list-group-item list-group-item-action pl-3">
+          <i class="fa fa-users" aria-hidden="true"></i> Client
+        </a>
+        <a href="#" class="list-group-item list-group-item-action pl-3">
+          <i class="fa fa-align-right sette" aria-hidden="true"></i> Stock
+        </a>
+        <a href="#" class="list-group-item list-group-item-action pl-3">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i> Purchase
+        </a>
+        <a href="#" class="list-group-item list-group-item-action pl-3">
+          <i class="fa fa-database" aria-hidden="true"></i> Sign Out
+        </a>
+    </div>
+  
+    <div class="container-fluid mainDiv">
+      <div class="newset" id="main">
+        <h3 class="py-4 text-white dash" onclick=""><i class="fa fa-home" aria-hidden="true"></i> DASHBOARD</h3>
+        <div class="row">
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Categories.</h6>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Quiz.</h6>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Live.</h6>
+            </div>
+          </div>
+
+          <div class="column">
+              <div class="card card-o">
+                <p class="card-text font-weight-bold old pl-4">4</p>
+                <h6 class="text-white">Total Not~Live.</h6>
+              </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20px 0px;">
+          <div class="column robb">
+            <div class="card rev text-left">
+                <div class="card-header font-weight-bold">
+                  List all clients
+                </div>
+                <div class="card-body" style="margin: 0px 20px !important; overflow-x: auto; padding: 0px !important;">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Client</th>
+                            <th>Cash Balance</th>
+                            <th>Gain/Loss</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-weight-bold">Fullstack</td>
+                            <td>$925.00</td>
+                            <td style="color: green !important;">+$37.50</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Horpschenzy</td>
+                            <td>$1000.00</td>
+                            <td>$0.00</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>                                              
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">35345</td>
+                            <td>$1000.00</td>
+                            <td>$0.00</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Kaandoe</td>
+                            <td>$880.00</td>
+                            <td style="color: red !important;">-$280.80</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="container">
+                    <div class="btn btn-light display-block w-100 my-3">View all</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="column robb">
+            <div class="card rev text-left">
+              <div class="card-header font-weight-bold">
+                List all stocks
+              </div>
+              <div class="card-body" style="margin: 0px 20px !important; overflow-x: auto; padding: 0px !important;">
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Company</th>
+                          <th>Unit Price</th>
+                          <th>Updated At</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold">Adcash</td>
+                          <td>$2.25</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock A</td>
+                          <td>$0.00</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock C</td>
+                          <td>$-0.67</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock B</td>
+                          <td>$-1111.00</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropleft signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+              <div class="container">
+                  <div class="btn btn-light display-block w-100 my-3">View all</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container-fluid mainDiv">
+      <div class="newset" id="main-2">
+        <h3 class="py-4 text-white dash" onclick=""><i class="fa fa-home" aria-hidden="true"></i> DASHBOARD</h3>
+        <div class="row">
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Categories.</h6>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Quiz.</h6>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card card-o">
+              <p class="card-text font-weight-bold old pl-4">4</p>
+              <h6 class="text-white">Total Live.</h6>
+            </div>
+          </div>
+
+          <div class="column">
+              <div class="card card-o">
+                <p class="card-text font-weight-bold old pl-4">4</p>
+                <h6 class="text-white">Total Not~Live.</h6>
+              </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20px 0px;">
+          <div class="column robb">
+            <div class="card rev text-left">
+                <div class="card-header font-weight-bold">
+                  List all clients
+                </div>
+                <div class="card-body" style="margin: 0px 20px !important; overflow-x: auto; padding: 0px !important;">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Client</th>
+                            <th>Cash Balance</th>
+                            <th>Gain/Loss</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="font-weight-bold">Fullstack</td>
+                            <td>$925.00</td>
+                            <td style="color: green !important;">+$37.50</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Horpschenzy</td>
+                            <td>$1000.00</td>
+                            <td>$0.00</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>                                              
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">35345</td>
+                            <td>$1000.00</td>
+                            <td>$0.00</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="font-weight-bold">Kaandoe</td>
+                            <td>$880.00</td>
+                            <td style="color: red !important;">-$280.80</td>
+                            <td>
+                              <div class="dropdown signin">
+                                <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Favourable Enough</a>
+                                  <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                  <a class="dropdown-item" href="#">It Matters</a>                                                  
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="container">
+                    <div class="btn btn-light display-block w-100 my-3">View all</div>
+                </div>
+            </div>
+          </div>
+
+          <div class="column robb">
+            <div class="card rev text-left">
+              <div class="card-header font-weight-bold">
+                List all stocks
+              </div>
+              <div class="card-body" style="margin: 0px 20px !important; overflow-x: auto; padding: 0px !important;">
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Company</th>
+                          <th>Unit Price</th>
+                          <th>Updated At</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold">Adcash</td>
+                          <td>$2.25</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock A</td>
+                          <td>$0.00</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock C</td>
+                          <td>$-0.67</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropdown signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold">Stock B</td>
+                          <td>$-1111.00</td>
+                          <td>22/08/2022</td>
+                          <td>
+                            <div class="dropleft signin">
+                              <i class="btn fa fa-ellipsis-h" data-toggle="dropdown" style="font-size: 14px;" aria-hidden="true"></i>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Favourable Enough</a>
+                                <a class="dropdown-item" href="#">Company's Satisfaction</a>
+                                <a class="dropdown-item" href="#">It Matters</a>                                                  
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+              <div class="container">
+                  <div class="btn btn-light display-block w-100 my-3">View all</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+            document.getElementById("main-2").style.marginLeft = "200px";
+            document.getElementById("bar1").style.display = "block";
+            document.getElementById("bar2").style.display = "none";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.getElementById("main-2").style.marginLeft= "0";
+            document.getElementById("bar1").style.display = "none";
+            document.getElementById("bar2").style.display = "block";
+        }
+    </script>
+
+    <script>
+      window.addEventListener ( 'load'
+      )
+      
+      const startQueries = () => {
+          let newQuery = window.matchMedia( ' ( max-width: 800px ) ' )
+
+          const queryListenChanges = query => {
+              if ( query.matches ) {
+                  document.querySelector ( '.mainDiv' ).style.marginLeft = '0'
+                  document.querySelector ( '.collapseNav' ).style.display = 'block'
+              } 
+
+              else {
+                  document.querySelector( '.mainDiv' ).style.marginLeft = '0'
+                  document.querySelector ( '.collapseNav' ).style.display = 'block'
+              }
+          }
+          newQuery.addListener( queryListenChanges ) 
+          queryListenChanges( newQuery )
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID PRACTICAL</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            margin: 0;
+        }
+        .first-item { 
+            position: fixed;
+            /* grid-area: header; */
+            text-decoration: none;
+            background-color: rgb(116, 110, 110);
+            border: 2px ;
+            height: 70px;
+            width: 100%;
+        }
+        .first-item-2 {
+            border: 2px;
+            justify-content:center;
+        }
+        .second-item { grid-area: menu; }
+        .third-item { 
+            grid-area: main;
+            margin-left: 18%;
+            margin-top: 8%;
+         }
+        .fourth-item { grid-area: right; }
+        .fifth-item { grid-area: footer; }
+        
+        .main-details {
+            padding: 0px 20px;
+            text-align: justify;
+        } 
+
+        .grid-container1 {
+            position: relative;
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+            gap: 5px;
+            background-color: gray;
+            padding: 0px;
+            width: 100%;
+            margin: 0;
+            }
+        .grid-container1 > div {
+            background-color: white;  
+            padding: 20px 0;
+            font-size: 20px;
+            }
+        .tutorial {
+                text-decoration: none;
+                padding: 24px;
+                color: black;
+                font-weight: bold;
+            }
+            .tutorial:hover {
+                background-color: forestgreen;
+                color: white;
+            }
+            .pro-new1 {
+                position: absolute;
+                top: 8%;
+                right: 37%;
+                padding: 10px;
+                background-color: rgb(4, 4, 39);
+                border-radius: 70px;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                justify-content: center;
+            }
+            .pro-new1:hover {
+                background-color: rgb(48, 161, 48);
+            }
+            .span-new1 {
+                border: 1px solid black;
+                font-weight: bold;
+                color: black;
+                border-radius: 30px;
+                background-color: whitesmoke;
+                text-decoration: none;
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .pro-new2 {
+                position: absolute;
+                top: 8%;
+                right: 24%;
+                padding: 10px;
+                background-color: pink;
+                border-radius: 70px;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+                justify-content: center;
+            }
+            .pro-new2:hover {
+                background-color: rgb(48, 161, 48);
+                color: white;
+            }
+            .span-new2 {
+                border: 1px solid black;
+                font-weight: bold;
+                color: black;
+                border-radius: 30px;
+                background-color: whitesmoke;
+                text-decoration: none;
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            .get-certified {
+                position: absolute;
+                top: 8%;
+                right: 12%;
+                padding: 10px;
+                border-radius: 70px;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+                text-align: center;
+                justify-content: center;
+            }
+            .get-certified:hover {
+                background-color: rgb(48, 161, 48);
+                color: white;
+            }
+            .login {
+                position: absolute;
+                top: 8%;
+                right: 1%;
+                padding: 10px;
+                width: 100px;
+                border-radius: 70px;
+                text-decoration: none;
+                background-color: green;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                justify-content: center;
+            }
+            .login:hover {
+                background-color: rgb(48, 161, 48);
+            }
+            .header-2 {
+                position: -webkit-sticky;
+                position: static;
+                top: 52px;
+                border: 1px solid black;
+                width: 100%;
+                height: 50px;
+                margin-top: 22px;
+            }
+            ul {
+                list-style-type: none;
+               
+                padding: 0;
+                overflow: hidden;
+                background-color: #333333;
+                width: 100%;
+                
+            }
+
+            li {
+                float: left;
+                font-size: 14px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: normal;
+                width: 100%;
+            }
+
+            li a {
+                display: block;
+                
+                color: black;
+                text-align: left;
+                padding: 10px 0px;
+                text-decoration: none;
+                overflow: hidden;
+                padding-left: 15px;
+            }
+
+            li a:hover {
+                background-color: lightgray;
+            }
+
+            .nav-bar-1 {
+            display: block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            width: 17%;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            height: 558px;
+            overflow: auto;
+            position: fixed;
+        }
+        .tuto-nav{
+            padding-left: 15px;
+            font-size: 25px;
+            width: auto;
+            /* overflow: hidden; */
+            /* border: 2px solid black; */
+            z-index: 100;
+            line-height: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container1">
+        <div class="first-item">
+            <div class="first-item-2">
+                <a class="tutorial" href="">Tutorials</a>
+                <a class="tutorial" href="">References</a>
+                <a class="tutorial" href="">Exercises</a>
+                <a class="tutorial" href="">Videos</a>
+                <a class="pro-new1" href="">Pro <span class="span-new1">NEW</span></a>
+                <a class="pro-new2" href="">Website <span class="span-new2">NEW</span></a>
+                <a class="get-certified" href="">Get Certified</a>
+                <a class="login" href="">Log in</a>
+            </div>
+                <!-- <ul class="header-2">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JAVASCRIPT</a></li>
+                    <li><a href="">SQL</a></li>
+                    <li><a href="">PYTHON</a></li>
+                    <li><a href="">PHP</a></li>
+                    <li><a href="">BOOTSTRAP</a></li>
+                    <li><a href="">HOW TO</a></li>
+                    <li><a href="">W3.CSS</a></li>
+                    <li><a href="">JAVA</a></li>
+                    <li><a href="">JQUERY</a></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="">DM</a></li>
+                    <li><a href="">'T'W3</a></li>
+                    <li><a href="">'S'W3</a></li>
+                </ul> -->
+        </div>
+        
+    <div class="second-item">
+        <ul class="menu nav-bar-1">
+            <p class="tuto-nav">CSS Tutorial</p>
+            <li><a class="active nav-list" href="https://www.w3schools.com/css/default.asp">CSS Home </a></li>
+            <li class="nav-list"><a class="nav-list" href="https://www.w3schools.com/css/css_intro.asp">CSS Introduction</a></li>
+            <li class="nav-list"><a class="nav-list" href="https://www.w3schools.com/css/css_syntax.asp">CSS Syntax</a></li>
+            <li><a href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a></li>
+            <li><a href="https://www.w3schools.com/css/css_howto.asp">CSS How To</a></li>
+            <li><a href="https://www.w3schools.com/css/css_comments.asp">CSS Comments</a></li>
+            <li><a href="https://www.w3schools.com/css/css_colors.asp">CSS Colors</a></li>
+            <li><a href="https://www.w3schools.com/css/css_background.asp">CSS Backgrounds</a></li>
+            <li><a href="https://www.w3schools.com/css/css_border.asp">CSS Borders</a></li>
+            <li><a href="https://www.w3schools.com/css/css_margin.asp">CSS Margins</a></li>
+            <li><a href="https://www.w3schools.com/css/css_padding.asp">CSS Padding</a></li>
+            <li><a href="https://www.w3schools.com/css/css_dimension.asp">CSS Height/Width</a></li>
+            <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></li>
+            <li><a href="https://www.w3schools.com/css/css_outline.asp">CSS Outline</a></li>
+            <li><a href="https://www.w3schools.com/css/css_text.asp">CSS Text</a></li>
+            <li><a href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a></li>
+            <li><a href="https://www.w3schools.com/css/css_icons.asp">CSS Icons</a></li>
+            <li><a href="https://www.w3schools.com/css/css_link.asp">CSS Links</a></li>
+            <li><a href="https://www.w3schools.com/css/css_list.asp">CSS Lists</a></li>
+            <li><a href="https://www.w3schools.com/css/css_table.asp">CSS Tables</a></li>
+            <li><a href="https://www.w3schools.com/css/css_display_visibility.asp">CSS Display</a></li>
+            <li><a href="https://www.w3schools.com/css/css_max-width.asp">CSS Max-width</a></li>
+            <li><a href="https://www.w3schools.com/css/css_positioning.asp">CSS Position</a></li>
+            <li><a href="https://www.w3schools.com/css/css_z-index.asp">CSS Z-index</a></li>
+            <li><a href="https://www.w3schools.com/css/css_overflow.asp">CSS Overflow</a></li>
+            <li><a href="https://www.w3schools.com/css/css_float.asp">CSS Float</a></li>
+            <li><a href="https://www.w3schools.com/css/css_inline-block.asp">CSS Inline-block</a></li>
+            <li><a href="https://www.w3schools.com/css/css_align.asp">CSS Align</a></li>
+            <li><a href="https://www.w3schools.com/css/css_combinators.asp">CSS Combinators</a></li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-class</a></li>
+            <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp">CSS Pseudo-element</a></li>
+            <li><a href="https://www.w3schools.com/css/css_image_transparency.asp">CSS Opacity</a></li>
+            <li><a href="https://www.w3schools.com/css/css_navbar.asp">CSS Navigation Bar</a></li>
+            <li><a href="https://www.w3schools.com/css/css_dropdowns.asp">CSS Dropdowns</a></li>
+            <li><a href="https://www.w3schools.com/css/css_image_gallery.asp">CSS Image Gallery</a></li>
+            <li><a href="https://www.w3schools.com/css/css_image_sprites.asp">CSS Image Sprites</a></li>
+            <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp">CSS Attr Selectors</a></li>
+            <li><a href="https://www.w3schools.com/css/css_form.asp">CSS Forms</a></li>
+            <li><a href="https://www.w3schools.com/css/css_counters.asp">CSS Counters</a></li>
+            <li><a href="https://www.w3schools.com/css/css_website_layout.asp">CSS Website Layout</a></li>
+            <li><a href="https://www.w3schools.com/css/css_units.asp">CSS Units</a></li>
+            <li><a href="https://www.w3schools.com/css/css_specificity.asp">CSS Specificity</a></li>
+            <li><a href="https://www.w3schools.com/css/css_important.asp">CSS !Important</a></li>
+            <li><a href="https://www.w3schools.com/css/css_math_functions.asp">CSS Math Functions</a></li>
+        </ul>
+    </div>
+    <div class="third-item">
+        <p class="main-details">Welcome to this citadel of learning! An institution devoted to Excellence in the Promotion of Holistic Health. We are focused on producing well-groomed technical manpower in quality adequate to meet market demand in harmony with the policies of the Federal and State Ministries of Health and Education and thus facilitate (Research in) the delivery or Primary Health Care at all level.
+
+            The College values the development of personal and entrepreneur leaderships in every student. The core values of excellence, integrity and service lay the groundwork for the development of future community, regional, national and international leaders.
+            
+            Your visit to our website will give many unique opportunities OSCOHTECH offers, but there is no substitute for visiting our environmentally friendly campus and meeting the friendly, dedicated staff. I hope you will enjoy your visit.
+            
+            Our Vision
+            To achieve excellence in Health manpower training and secure credibility in all aspects of our endeavour and thus become the best College of Health Technology with qualified staff, offering diverse programmes with full accreditation, and graduating students armed with knowledge, skill and the right attitude to face the challenges of Health care delivery system thus, making their horizon limitless.
+            
+            Our Mission
+            To create, preserve and communicate knowledge in Health Science, Technology, behavioural and Management Sciences and scholarship in other fields of human endeavour and thereby contribute to the complete enhancement of health and well being of the people of Ogun State in particular, Nigeria and the entire globe.
+            Welcome to this citadel of learning! An institution devoted to Excellence in the Promotion of Holistic Health. We are focused on producing well-groomed technical manpower in quality adequate to meet market demand in harmony with the policies of the Federal and State Ministries of Health and Education and thus facilitate (Research in) the delivery or Primary Health Care at all level.
+
+            The College values the development of personal and entrepreneur leaderships in every student. The core values of excellence, integrity and service lay the groundwork for the development of future community, regional, national and international leaders.
+            
+            Your visit to our website will give many unique opportunities OSCOHTECH offers, but there is no substitute for visiting our environmentally friendly campus and meeting the friendly, dedicated staff. I hope you will enjoy your visit.
+            
+            Our Vision
+            To achieve excellence in Health manpower training and secure credibility in all aspects of our endeavour and thus become the best College of Health Technology with qualified staff, offering diverse programmes with full accreditation, and graduating students armed with knowledge, skill and the right attitude to face the challenges of Health care delivery system thus, making their horizon limitless.
+            
+            Our Mission
+            To create, preserve and communicate knowledge in Health Science, Technology, behavioural and Management Sciences and scholarship in other fields of human endeavour and thereby contribute to the complete enhancement of health and well being of the people of Ogun State in particular, Nigeria and the entire globe.
+            Welcome to this citadel of learning! An institution devoted to Excellence in the Promotion of Holistic Health. We are focused on producing well-groomed technical manpower in quality adequate to meet market demand in harmony with the policies of the Federal and State Ministries of Health and Education and thus facilitate (Research in) the delivery or Primary Health Care at all level.
+
+            The College values the development of personal and entrepreneur leaderships in every student. The core values of excellence, integrity and service lay the groundwork for the development of future community, regional, national and international leaders.
+            
+            Your visit to our website will give many unique opportunities OSCOHTECH offers, but there is no substitute for visiting our environmentally friendly campus and meeting the friendly, dedicated staff. I hope you will enjoy your visit.
+            
+            Our Vision
+            To achieve excellence in Health manpower training and secure credibility in all aspects of our endeavour and thus become the best College of Health Technology with qualified staff, offering diverse programmes with full accreditation, and graduating students armed with knowledge, skill and the right attitude to face the challenges of Health care delivery system thus, making their horizon limitless.
+            
+            Our Mission
+            To create, preserve and communicate knowledge in Health Science, Technology, behavioural and Management Sciences and scholarship in other fields of human endeavour and thereby contribute to the complete enhancement of health and well being of the people of Ogun State in particular, Nigeria and the entire globe.
+            </p>
+    </div>
+    <div class="fourth-item">RIGHT</div>
+    <div class="fifth-item">FOOTER</div>
+</div>
+
+
+</body>
+</html>

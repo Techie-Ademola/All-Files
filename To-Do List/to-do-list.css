@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: #f5f5f5;
+    width: 100vw;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.content .todo-form {
+    grid-column: 1 / 2;
+    border-right: #ccc 1px solid;
+    padding: 1rem;
+}
+
+.todo-form input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+.todo-form button {
+    margin: .5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    color: rgb(48, 42, 97);
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-form h2,
+.todo-list h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.content .todo-list {
+    grid-column: 2 / 2;
+    padding: 1rem;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list ul li {
+    padding: .2rem .5rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: .5rem 0;
+    color: rgb(61, 61, 80);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: medium;
+}
+
+.emptyMessage {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: rgba(32, 31, 31, 0.915);
+}
+
+.remove {
+    padding: .5rem;
+    border: none;
+    background: transparent;
+    color: red;
+}
+
+.remove:hover {
+    cursor: pointer;
+}
